@@ -1,6 +1,4 @@
-function uncompletedNotes(notes) {
-  
-}
+
 
 const notes = [
   {
@@ -51,5 +49,19 @@ const notes = [
     ],
   },
 ];
+
+
+function uncompletedNotes(notes) {
+  // ...
+  const notPassed = [];
+  
+  notes.forEach(note => {
+    note.todos.filter(todos => !todos.done)
+              .forEach(notPass => notPassed.push(notPass));
+  });
+
+  console.log(notPassed);
+}
+
 
 uncompletedNotes(notes);
