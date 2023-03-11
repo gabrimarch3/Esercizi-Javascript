@@ -4,6 +4,7 @@
 // developer => 1500
 // default => 1000
 function calculateSalary(role) {
+  let salary = 0;
   switch(role) {
     case "ceo":
       salary = 2200;
