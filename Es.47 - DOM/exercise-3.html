@@ -21,11 +21,9 @@
 
 <script>
   // code here
-const firstName = document.getElementById("firstName").value;
-const lastName = document.getElementById("lastName").value;
-const age = document.getElementById("age").value;
+const inputs = document.querySelectorAll('.form-input');
 
-console.log(`First Name: ${firstName}`);
-console.log(`Last Name: ${lastName}`);
-console.log(`Age: ${age}`);
+inputs.forEach(element => {
+  console.log(`${element.previousElementSibling.textContent} ${element.value}`)
+})
 </script>
